@@ -351,7 +351,7 @@
                 </div>
                 <div class="project-content">
                     <span class="project-category">Backend</span>
-                    <h3 class="project-title">REST API Service</h3>
+                    <h3 class="project-title">Yava Backend</h3>
                     <p class="project-description">
                         RESTful API with authentication, data validation, and comprehensive documentation for third-party integration.
                     </p>
@@ -362,7 +362,7 @@
                         <span class="tech-tag">Mysql</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link link-primary">
+                        <a href="https://yava-webcore.k8s.redtech.co.id/login" class="project-link link-primary">
                             Live Demo
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
@@ -396,7 +396,7 @@
                 </div>
                 <div class="project-content">
                     <span class="project-category">Backend</span>
-                    <h3 class="project-title">E-Commerce Backend</h3>
+                    <h3 class="project-title">Library Backend</h3>
                     <p class="project-description">
                         Scalable e-commerce backend with payment gateway integration, inventory management, and order processing system.
                     </p>
@@ -412,7 +412,7 @@
                                 <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
                             </svg>
                         </a>
-                        <a href="#" class="project-link link-secondary">Code</a>
+                        <a href="https://github.com/darklco/perpustakaan" class="project-link link-secondary">Code</a>
                     </div>
                 </div>
             </div>
@@ -439,7 +439,7 @@
                 </div>
                 <div class="project-content">
                     <span class="project-category">Backend</span>
-                    <h3 class="project-title">Microservices Architecture</h3>
+                    <h3 class="project-title">JPS-Re Backend</h3>
                     <p class="project-description">
                         Distributed microservices system with message queues, service discovery, and centralized logging for high availability.
                     </p>
@@ -449,7 +449,7 @@
                         <span class="tech-tag">Mysql</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link link-primary">
+                        <a href="https://jpsre.k8s.redtech.co.id/login" class="project-link link-primary">
                             Live Demo
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
@@ -483,18 +483,17 @@
                 </div>
                 <div class="project-content">
                     <span class="project-category">Frontend</span>
-                    <h3 class="project-title">Portfolio Dashboard</h3>
+                    <h3 class="project-title">JPS-Re Frontend</h3>
                     <p class="project-description">
                         Modern and responsive dashboard UI with data visualization, charts, and interactive components.
                     </p>
                     <div class="project-tech">
-                        <span class="tech-tag">Vue.js</span>
-                        <span class="tech-tag">Chart.js</span>
-                        <span class="tech-tag">Sass</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">HTML</span>
                         <span class="tech-tag">Bootstrap</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link link-primary">
+                        <a href="https://jpsre.k8s.redtech.co.id/?lang=en" class="project-link link-primary">
                             Live Demo
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>

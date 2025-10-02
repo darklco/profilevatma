@@ -45,7 +45,7 @@
             text-decoration: none;
             font-family: serif;
             transition: all 0.4s ease;
-            z-index: 1001;
+            z-index: 1002;
         }
 
         .logo:hover {
@@ -171,23 +171,25 @@
 
             .nav-menu {
                 position: fixed;
-                left: -100%;
+                right: -100%;
                 top: 0;
                 flex-direction: column;
                 background: rgba(232, 220, 196, 0.98);
                 backdrop-filter: blur(10px);
-                width: 100%;
+                width: 70%;
+                max-width: 400px;
                 height: 100vh;
                 text-align: center;
-                transition: left 0.4s ease;
-                border-bottom: 2px solid #561c24;
+                transition: right 0.4s ease;
+                border-left: 2px solid #561c24;
                 padding: 100px 40px 40px;
                 gap: 35px;
                 justify-content: flex-start;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
             }
 
             .nav-menu.active {
-                left: 0;
+                right: 0;
             }
 
             .nav-link {
@@ -223,6 +225,7 @@
             }
 
             .nav-menu {
+                width: 80%;
                 padding: 80px 20px 40px;
                 gap: 30px;
             }
@@ -273,7 +276,12 @@
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">Portofolio Vatma</a>
+            <a href="#" class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <circle cx="20" cy="20" r="18" fill="#561c24" stroke="#8b4a52" stroke-width="2"/>
+                    <text x="20" y="27" font-family="serif" font-size="20" font-weight="bold" fill="#e8dcc4" text-anchor="middle">V</text>
+                </svg>
+            </a>
             
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link active">Home</a></li>

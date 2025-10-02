@@ -23,7 +23,6 @@
             padding: 40px 40px;
         }
 
-        /* Header */
         .section-header {
             text-align: center;
             margin-bottom: 30px;
@@ -47,7 +46,6 @@
             margin-bottom: 20px;
         }
 
-        /* About Content */
         .about-content {
             display: block;
             margin-bottom: 40px;
@@ -85,7 +83,6 @@
             font-weight: 600;
         }
 
-        /* Skills Section */
         .skills-section {
             margin-bottom: 40px;
         }
@@ -166,7 +163,6 @@
             font-size: 1.2rem;
         }
 
-        /* Experience Timeline */
         .experience-section {
             margin-bottom: 40px;
         }
@@ -185,17 +181,6 @@
 
         .timeline {
             position: relative;
-            padding-left: 50px;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 20px;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: #d4c5a9;
         }
 
         .timeline-item {
@@ -207,17 +192,6 @@
         .timeline-item:nth-child(1) { animation-delay: 0.1s; }
         .timeline-item:nth-child(2) { animation-delay: 0.2s; }
         .timeline-item:nth-child(3) { animation-delay: 0.3s; }
-
-        .timeline-dot {
-            position: absolute;
-            left: -38px;
-            top: 5px;
-            width: 16px;
-            height: 16px;
-            background: #561c24;
-            border: 3px solid #e8dcc4;
-            border-radius: 50%;
-        }
 
         .timeline-content {
             background: rgba(255, 255, 255, 0.6);
@@ -263,7 +237,6 @@
             font-size: 0.95rem;
         }
 
-        /* Stats Section */
         .stats-section {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -300,7 +273,6 @@
             font-weight: 500;
         }
 
-        /* CTA Section */
         .cta-section {
             text-align: center;
             padding: 40px 40px;
@@ -388,29 +360,6 @@
             }
         }
 
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        /* Tablet Responsive */
         @media (max-width: 968px) {
             .about-section {
                 padding: 40px 30px;
@@ -433,16 +382,11 @@
                 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             }
 
-            .timeline {
-                padding-left: 40px;
-            }
-
             .stats-section {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
 
-        /* Mobile Responsive */
         @media (max-width: 480px) {
             .about-section {
                 padding: 30px 20px;
@@ -497,18 +441,6 @@
                 font-size: 1.3rem;
             }
 
-            .timeline {
-                padding-left: 30px;
-            }
-
-            .timeline::before {
-                left: 10px;
-            }
-
-            .timeline-dot {
-                left: 2px;
-            }
-
             .timeline-content {
                 padding: 18px;
             }
@@ -553,7 +485,6 @@
             }
         }
 
-        /* Extra small devices */
         @media (max-width: 360px) {
             .section-title {
                 font-size: 1.75rem;
@@ -572,13 +503,11 @@
 </head>
 <body>
     <section class="about-section" id="about">
-        <!-- Header -->
         <div class="section-header">
             <p class="section-subtitle">Get To Know More</p>
             <h2 class="section-title">About Me</h2>
         </div>
 
-        <!-- About Content -->
         <div class="about-content">
             <div class="about-text">
                 <p>
@@ -593,7 +522,6 @@
             </div>
         </div>
 
-        <!-- Skills Section -->
         <div class="skills-section">
             <div class="skills-header">
                 <h3>My Skills</h3>
@@ -643,14 +571,12 @@
             </div>
         </div>
 
-        <!-- Experience Timeline -->
         <div class="experience-section">
             <div class="experience-header">
                 <h3>Experience</h3>
             </div>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <span class="timeline-date">2025 - Present</span>
                         <h4>Backend Developer</h4>
@@ -658,6 +584,7 @@
                         <p>Developing and maintaining scalable backend systems, implementing RESTful APIs, and optimizing database performance for high-traffic applications.</p>
                     </div>
                 </div>
+            </div>
         </div>
     </section>
 </body>

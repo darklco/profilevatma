@@ -45,6 +45,7 @@
             text-decoration: none;
             font-family: serif;
             transition: all 0.4s ease;
+            z-index: 1001;
         }
 
         .logo:hover {
@@ -120,6 +121,7 @@
             flex-direction: column;
             cursor: pointer;
             gap: 5px;
+            z-index: 1001;
         }
 
         .hamburger span {
@@ -153,9 +155,14 @@
             }
         }
 
+        /* Tablet Responsive */
         @media (max-width: 968px) {
             .nav-container {
-                padding: 20px;
+                padding: 15px 30px;
+            }
+
+            .logo {
+                font-size: 1.3rem;
             }
 
             .hamburger {
@@ -165,23 +172,69 @@
             .nav-menu {
                 position: fixed;
                 left: -100%;
-                top: 70px;
+                top: 0;
                 flex-direction: column;
                 background: rgba(232, 220, 196, 0.98);
+                backdrop-filter: blur(10px);
                 width: 100%;
+                height: 100vh;
                 text-align: center;
                 transition: left 0.4s ease;
                 border-bottom: 2px solid #561c24;
-                padding: 40px 0;
-                gap: 30px;
+                padding: 100px 40px 40px;
+                gap: 35px;
+                justify-content: flex-start;
             }
 
             .nav-menu.active {
                 left: 0;
             }
 
+            .nav-link {
+                font-size: 1.2rem;
+                padding: 10px 0;
+                width: 100%;
+            }
+
             .nav-link::after {
                 display: none;
+            }
+
+            .nav-btn {
+                margin-top: 20px;
+                padding: 15px 35px;
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 12px 20px;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .hamburger span {
+                width: 22px;
+                height: 2.5px;
+            }
+
+            .nav-menu {
+                padding: 80px 20px 40px;
+                gap: 30px;
+            }
+
+            .nav-link {
+                font-size: 1.1rem;
+                padding: 8px 0;
+            }
+
+            .nav-btn {
+                padding: 14px 30px;
+                font-size: 1rem;
             }
         }
 
@@ -203,18 +256,29 @@
             color: #8b4a52;
             border-bottom: 1px solid #d4c5a9;
         }
+
+        @media (max-width: 480px) {
+            .demo-content {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .demo-section {
+                font-size: 1.5rem;
+                min-height: 60vh;
+            }
+        }
     </style>
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">VA</a>
+            <a href="#" class="logo">Portofolio Vatma</a>
             
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
                 <li><a href="#contact" class="nav-btn">
                     Contact Me
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -236,21 +300,41 @@
         const navMenu = document.getElementById('navMenu');
         const navLinks = document.querySelectorAll('.nav-link');
 
+        // Toggle hamburger menu
         hamburger.addEventListener('click', function() {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
         });
 
+        // Handle nav link clicks
         navLinks.forEach(link => {
-            link.addEventListener('click', function() {
+            link.addEventListener('click', function(e) {
+                // Remove active class from all links
                 navLinks.forEach(l => l.classList.remove('active'));
+                // Add active class to clicked link
                 this.classList.add('active');
                 
+                // Close mobile menu
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
             });
         });
 
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideMenu = navMenu.contains(event.target);
+            const isClickOnHamburger = hamburger.contains(event.target);
+            
+            if (!isClickInsideMenu && !isClickOnHamburger && navMenu.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Navbar scroll effect
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 50) {

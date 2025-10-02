@@ -5,20 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vatma Aulia Adha - Web Developer</title>
     <style>
-             .container {
-            max-width: 1200px;
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            padding: 40px;
-            direction: rtl;
-        }
-
-        .container > * {
-            direction: ltr;
-        }
         * {
             margin: 0;
             padding: 0;
@@ -160,6 +146,7 @@
             box-shadow: 0 20px 60px rgba(86, 28, 36, 0.3);
             margin: 0 auto;
             animation: float 6s ease-in-out infinite;
+            background: #d4c5a9;
         }
 
         .profile-circle img {
@@ -167,17 +154,6 @@
             height: 100%;
             object-fit: cover;
             object-position: center;
-        }
-
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-100%);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         @keyframes slideInLeft {
@@ -215,45 +191,42 @@
             50% { transform: translateY(-20px); }
         }
 
+        /* Mobile Responsive - Centered Layout */
         @media (max-width: 968px) {
-            .nav-container {
-                padding: 20px;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-
-            .nav-menu {
-                position: fixed;
-                left: -100%;
-                top: 70px;
-                flex-direction: column;
-                background: rgba(232, 220, 196, 0.98);
-                width: 100%;
-                text-align: center;
-                transition: left 0.4s ease;
-                box-shadow: 0 10px 27px rgba(86, 28, 36, 0.1);
-                padding: 40px 0;
-                gap: 30px;
-            }
-
-            .nav-menu.active {
-                left: 0;
-            }
-
-            .nav-link::after {
-                display: none;
-            }
-
             .container {
                 grid-template-columns: 1fr;
                 gap: 40px;
                 text-align: center;
+                padding: 20px;
+            }
+
+            /* Gambar di paling atas */
+            .image-container {
+                order: -1;
+                margin-bottom: 20px;
+            }
+
+            .profile-circle {
+                max-width: 280px;
+            }
+
+            /* Content rata tengah */
+            .content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
 
             h1 {
                 font-size: 3rem;
+            }
+
+            .greeting {
+                text-align: center;
+            }
+
+            .title {
+                text-align: center;
             }
 
             .buttons {
@@ -264,17 +237,18 @@
             .social-links {
                 justify-content: center;
             }
-
-            .image-container {
-                order: -1;
-            }
-
-            .profile-circle {
-                max-width: 280px;
-            }
         }
 
         @media (max-width: 480px) {
+            .hero-section {
+                padding: 80px 15px 20px 15px;
+            }
+
+            .container {
+                gap: 30px;
+                padding: 15px;
+            }
+
             h1 {
                 font-size: 2.5rem;
             }
@@ -285,6 +259,7 @@
 
             .title {
                 font-size: 1.1rem;
+                margin-bottom: 30px;
             }
 
             .btn {
@@ -292,21 +267,35 @@
                 font-size: 0.9rem;
             }
 
+            .buttons {
+                gap: 15px;
+            }
+
             .profile-circle {
                 max-width: 240px;
+            }
+
+            .social-links a {
+                font-size: 1.3rem;
             }
         }
     </style>
 </head>
 <body>
-   @include('layouts.navbar')
+     @include('layouts.navbar')
     <!-- Hero Section -->
     <section class="hero-section" id="home">
         <div class="container">
+            <div class="image-container">
+                <div class="profile-circle">
+                    <img src="{{ asset('image/me.png') }}" alt="Profile">
+                </div>
+            </div>
+
             <div class="content">
-                <p class="greeting">Hello, I'm <span class="wave">👋</span></p>
+                <p class="section-subtitle">About Me <span class="wave">👋</span></p>
                 <h1>Vatma Aulia<br>Adha</h1>
-                <p class="title">Web Developer</p>
+                <p class="title">Backend Developer</p>
                 
                 <div class="buttons">
                     <a href="#contact" class="btn btn-primary">
@@ -336,16 +325,11 @@
                     </a>
                 </div>
             </div>
-
-            <div class="image-container">
-                <div class="profile-circle">
-                     <img src="{{ asset('image/me.png') }}" alt="Profile">
-                </div>
-            </div>
         </div>
     </section>
+    @include('sections.about')
     @include('sections.project')
     @include('sections.contact')
-
+    {{-- @include('layouts.footer') --}}
 </body>
 </html>

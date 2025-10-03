@@ -6,7 +6,7 @@
         position: relative;
         overflow: hidden;
         width: 100%;
-        margin-top: auto;
+        margin-top: 40px;
     }
 
     .portfolio-footer::before {
@@ -197,8 +197,7 @@
                 <ul class="footer-links">
                     <li><a href="#home">Beranda</a></li>
                     <li><a href="#about">Tentang</a></li>
-                    <li><a href="#projects">Proyek</a></li>
-                    <li><a href="#skills">Keahlian</a></li>
+                    <li><a href="#portfolio">Portofolio</a></li>
                     <li><a href="#contact">Kontak</a></li>
                 </ul>
             </div>

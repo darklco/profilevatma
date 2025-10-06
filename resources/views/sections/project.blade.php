@@ -122,6 +122,17 @@
             overflow: hidden;
         }
 
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+
         .project-overlay {
             position: absolute;
             top: 0;
@@ -142,8 +153,7 @@
         }
 
         .overlay-btn {
-            width: 45px;
-            height: 45px;
+            padding: 12px 30px;
             background: #e8dcc4;
             color: #561c24;
             border: none;
@@ -151,14 +161,17 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            gap: 8px;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
         }
 
         .overlay-btn:hover {
             background: #fff;
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
         .project-content {
@@ -195,7 +208,6 @@
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            margin-bottom: 20px;
         }
 
         .tech-tag {
@@ -205,47 +217,6 @@
             background: rgba(86, 28, 36, 0.1);
             border: 1px solid #d4c5a9;
             border-radius: 5px;
-        }
-
-        .project-links {
-            display: flex;
-            gap: 12px;
-        }
-
-        .project-link {
-            flex: 1;
-            padding: 10px 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .link-primary {
-            background: #561c24;
-            color: #e8dcc4;
-        }
-
-        .link-primary:hover {
-            background: #6d2430;
-            transform: translateY(-2px);
-        }
-
-        .link-secondary {
-            background: transparent;
-            color: #561c24;
-            border: 2px solid #561c24;
-        }
-
-        .link-secondary:hover {
-            background: #561c24;
-            color: #e8dcc4;
         }
 
         @keyframes fadeInDown {
@@ -306,11 +277,6 @@
             .project-content {
                 padding: 20px;
             }
-
-            .project-links {
-                flex-direction: column;
-                gap: 10px;
-            }
         }
     </style>
 </head>
@@ -333,18 +299,12 @@
             <!-- Backend Project 1 -->
             <div class="project-card" data-category="backend">
                 <div class="project-image">
-                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#e8dcc4" stroke-width="1.5">
-                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                    </svg>
+                    <img src="image/yava-be.png" alt="Yava Backend Project">
                     <div class="project-overlay">
-                        <a href="#" class="overlay-btn" title="Live Demo">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <a href="https://yava-webcore.k8s.redtech.co.id/login" class="overlay-btn">
+                            See
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="overlay-btn" title="View Code">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
                         </a>
                     </div>
@@ -361,35 +321,18 @@
                         <span class="tech-tag">API</span>
                         <span class="tech-tag">Mysql</span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://yava-webcore.k8s.redtech.co.id/login" class="project-link link-primary">
-                            Live Demo
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="project-link link-secondary">Code</a>
-                    </div>
                 </div>
             </div>
 
             <!-- Backend Project 2 -->
             <div class="project-card" data-category="backend">
                 <div class="project-image">
-                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#e8dcc4" stroke-width="1.5">
-                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                        <line x1="8" y1="21" x2="16" y2="21"/>
-                        <line x1="12" y1="17" x2="12" y2="21"/>
-                    </svg>
+                    <img src="assets/images/library-backend.jpg" alt="Library Backend Project">
                     <div class="project-overlay">
-                        <a href="#" class="overlay-btn" title="Live Demo">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <a href="https://github.com/darklco/perpustakaan" class="overlay-btn">
+                            See
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="overlay-btn" title="View Code">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
                         </a>
                     </div>
@@ -405,34 +348,18 @@
                         <span class="tech-tag">PHP</span>
                         <span class="tech-tag">Mysql</span>
                     </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link link-primary">
-                            Live Demo
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
-                            </svg>
-                        </a>
-                        <a href="https://github.com/darklco/perpustakaan" class="project-link link-secondary">Code</a>
-                    </div>
                 </div>
             </div>
 
             <!-- Backend Project 3 -->
             <div class="project-card" data-category="backend">
                 <div class="project-image">
-                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#e8dcc4" stroke-width="1.5">
-                        <path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/>
-                        <line x1="7" y1="7" x2="7.01" y2="7"/>
-                    </svg>
+                    <img src="image/jpsre-be.png" alt="JPS-Re Backend Project">
                     <div class="project-overlay">
-                        <a href="#" class="overlay-btn" title="Live Demo">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <a href="https://jpsre.k8s.redtech.co.id/login" class="overlay-btn">
+                            See
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="overlay-btn" title="View Code">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
                         </a>
                     </div>
@@ -448,35 +375,18 @@
                         <span class="tech-tag">PHP</span>
                         <span class="tech-tag">Mysql</span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://jpsre.k8s.redtech.co.id/login" class="project-link link-primary">
-                            Live Demo
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="project-link link-secondary">Code</a>
-                    </div>
                 </div>
             </div>
 
             <!-- Frontend Project 1 -->
             <div class="project-card" data-category="frontend" style="display: none;">
                 <div class="project-image">
-                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#e8dcc4" stroke-width="1.5">
-                        <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
-                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-                        <line x1="12" y1="22.08" x2="12" y2="12"/>
-                    </svg>
+                    <img src="image/jpsre.png" alt="JPS-Re Frontend Project">
                     <div class="project-overlay">
-                        <a href="#" class="overlay-btn" title="Live Demo">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <a href="https://jpsre.k8s.redtech.co.id/?lang=en" class="overlay-btn">
+                            See
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="overlay-btn" title="View Code">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
                         </a>
                     </div>
@@ -492,34 +402,18 @@
                         <span class="tech-tag">HTML</span>
                         <span class="tech-tag">Bootstrap</span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://jpsre.k8s.redtech.co.id/?lang=en" class="project-link link-primary">
-                            Live Demo
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="project-link link-secondary">Code</a>
-                    </div>
                 </div>
             </div>
+
             <!-- Frontend Project 2 -->
             <div class="project-card" data-category="frontend" style="display: none;">
                 <div class="project-image">
-                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#e8dcc4" stroke-width="1.5">
-                        <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
-                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-                        <line x1="12" y1="22.08" x2="12" y2="12"/>
-                    </svg>
+                    <img src="image/portofolio.png" alt="Portfolio Frontend Project">
                     <div class="project-overlay">
-                        <a href="#" class="overlay-btn" title="Live Demo">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <a href="#" class="overlay-btn">
+                            See
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="overlay-btn" title="View Code">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
                         </a>
                     </div>
@@ -536,20 +430,10 @@
                         <span class="tech-tag">JavaScript</span>
                         <span class="tech-tag">Bootstrap</span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://jpsre.k8s.redtech.co.id/?lang=en" class="project-link link-primary">
-                            Live Demo
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="project-link link-secondary">Code</a>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
-    
     
     <script>
         const filterBtns = document.querySelectorAll('.filter-btn');

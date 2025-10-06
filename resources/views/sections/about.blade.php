@@ -20,7 +20,7 @@
         .about-section {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 40px;
+            padding: 0px 40px;
         }
 
         .section-header {
@@ -578,8 +578,18 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-content">
+                        <span class="timeline-date">2023 - Present</span>
+                        <h4>Software Engineering Students</h4>
+                        <p class="timeline-company">SMK 17 Agustus 1945</p>
+                        <p>Developing and maintaining scalable backend systems, implementing RESTful APIs, and optimizing database performance for high-traffic applications.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
                         <span class="timeline-date">2025 - Present</span>
-                        <h4>Backend Developer</h4>
+                        <h4>Intern as Backend Developer</h4>
                         <p class="timeline-company">PT Redbuzz Mediatama</p>
                         <p>Developing and maintaining scalable backend systems, implementing RESTful APIs, and optimizing database performance for high-traffic applications.</p>
                     </div>

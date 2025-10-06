@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vatma Aulia Adha - Web Developer</title>
     <style>
+        @font-face {
+            font-family: 'MyCustomFont';
+            src: url('/fonts/Moderniz.ttf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -54,11 +61,13 @@
         }
 
         h1 {
-            font-size: 4.5rem;
+            font-size: 3rem;
             font-weight: 900;
             color: #561c24;
             line-height: 1.1;
             margin-bottom: 20px;
+            /* font-family: 'MyCustomFont'; */
+            /* src: url('fonts/kalufira.otf') format('truetype'); */
             font-family: serif;
         }
 
@@ -121,7 +130,7 @@
 
         .social-links a {
             color: #561c24;
-            font-size: 1.5rem;
+            font-size: 0.5rem;
             transition: all 0.4s ease;
         }
 

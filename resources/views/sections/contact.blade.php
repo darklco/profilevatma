@@ -22,7 +22,7 @@
         .contact-section {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px 80px;
+            padding: 0px 80px;
         }
 
         .section-header {
@@ -412,64 +412,30 @@
                 </div>
             </div>
 
-            <div class="contact-form">
-                <form id="contactForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" id="email" name="email">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message"></textarea>
-                    </div>
-
-                    <button type="submit" class="submit-btn">
-                        Send Message
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <line x1="22" y1="2" x2="11" y2="13" />
-                            <polygon points="22 2 15 22 11 13 2 9 22 2" />
-                        </svg>
-                    </button>
-                </form>
-            </div>
-        </div>
+            
     </section>
 
     <script>
         // Animasi masuk untuk tiap item
-document.querySelectorAll('.animate-left, .animate-right, .animate-bottom').forEach(item => {
-    observer.observe(item);
-});
+        document.querySelectorAll('.animate-left, .animate-right, .animate-bottom').forEach(item => {
+            observer.observe(item);
+        });
 
-observer.disconnect(); // reset dulu observer lama
+        observer.disconnect(); // reset dulu observer lama
 
-const animatedItems = document.querySelectorAll('.animate-left, .animate-right, .animate-bottom');
+        const animatedItems = document.querySelectorAll('.animate-left, .animate-right, .animate-bottom');
 
-const newObserver = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        }
-    });
-}, observerOptions);
+        const newObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, observerOptions);
 
-animatedItems.forEach(item => {
-    newObserver.observe(item);
-});
-
+        animatedItems.forEach(item => {
+            newObserver.observe(item);
+        });
     </script>
 </body>
 

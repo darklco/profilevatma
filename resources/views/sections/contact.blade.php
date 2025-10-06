@@ -57,14 +57,16 @@
         }
 
         .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             gap: 60px;
-            align-items: start;
         }
 
         .contact-info {
             animation: fadeInLeft 1.2s ease-out;
+            width: 100%;
+            max-width: 800px;
         }
 
         .info-title {

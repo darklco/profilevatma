@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Vatma Aulia Adha</title>
     <style>
+         @font-face {
+            font-family: 'MyCustomFont';
+            src: url('fonts/Stars-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
         * {
             margin: 0;
             padding: 0;
@@ -13,14 +20,16 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #e8dcc4;
+            background: #1f1c17;
             min-height: 100vh;
+
         }
 
         .about-section {
             max-width: 1200px;
+            
             margin: 0 auto;
-            padding: 0px 40px;
+            padding: 0px;
         }
 
         .section-header {
@@ -42,7 +51,7 @@
             font-size: 3rem;
             font-weight: 900;
             color: #561c24;
-            font-family: serif;
+            font-family: arial;
             margin-bottom: 20px;
         }
 
@@ -52,23 +61,11 @@
             text-align: center;
         }
 
-        .about-image {
-            display: none;
-        }
-
         .about-text {
             animation: fadeInUp 1s ease-out;
             max-width: 900px;
             margin: 0 auto;
             text-align: left;
-        }
-
-        .about-text h3 {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #561c24;
-            margin-bottom: 20px;
-            font-family: serif;
         }
 
         .about-text p {
@@ -237,107 +234,6 @@
             font-size: 0.95rem;
         }
 
-        .stats-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
-        }
-
-        .stat-card {
-            text-align: center;
-            padding: 25px 20px;
-            background: rgba(255, 255, 255, 0.6);
-            border: 2px solid #d4c5a9;
-            border-radius: 12px;
-            transition: all 0.4s ease;
-        }
-
-        .stat-card:hover {
-            border-color: #561c24;
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.9);
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 900;
-            color: #561c24;
-            font-family: serif;
-            margin-bottom: 10px;
-        }
-
-        .stat-label {
-            font-size: 1rem;
-            color: #8b4a52;
-            font-weight: 500;
-        }
-
-        .cta-section {
-            text-align: center;
-            padding: 40px 40px;
-            background: rgba(255, 255, 255, 0.6);
-            border: 2px solid #d4c5a9;
-            border-radius: 12px;
-        }
-
-        .cta-section h3 {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #561c24;
-            margin-bottom: 15px;
-            font-family: serif;
-        }
-
-        .cta-section p {
-            font-size: 1.1rem;
-            color: #8b4a52;
-            margin-bottom: 25px;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 15px 35px;
-            font-size: 1rem;
-            font-weight: 600;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            transition: all 0.4s ease;
-        }
-
-        .btn-primary {
-            background: #561c24;
-            color: #e8dcc4;
-        }
-
-        .btn-primary:hover {
-            background: #6d2430;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(86, 28, 36, 0.4);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: #561c24;
-            border: 2px solid #561c24;
-        }
-
-        .btn-secondary:hover {
-            background: #561c24;
-            color: #e8dcc4;
-        }
-
         @keyframes fadeInDown {
             from {
                 opacity: 0;
@@ -381,15 +277,11 @@
             .skills-grid {
                 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             }
-
-            .stats-section {
-                grid-template-columns: repeat(2, 1fr);
-            }
         }
 
         @media (max-width: 480px) {
             .about-section {
-                padding: 30px 20px;
+                padding: 3px 20px;
             }
 
             .section-header {
@@ -451,37 +343,6 @@
 
             .timeline-item {
                 margin-bottom: 20px;
-            }
-
-            .stats-section {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .stat-number {
-                font-size: 2.5rem;
-            }
-
-            .cta-section {
-                padding: 30px 25px;
-            }
-
-            .cta-section h3 {
-                font-size: 1.6rem;
-            }
-
-            .cta-section p {
-                font-size: 1rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .btn {
-                width: 100%;
-                justify-content: center;
             }
         }
 

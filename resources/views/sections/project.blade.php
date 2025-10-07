@@ -13,9 +13,9 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #e8dcc4;
+            background: #ffffff;
             min-height: 100vh;
-            padding: 40px 20px;
+            /* padding: 40px 20px; */
         }
 
         .portfolio-section {
@@ -327,7 +327,7 @@
             <!-- Backend Project 2 -->
             <div class="project-card" data-category="backend">
                 <div class="project-image">
-                    <img src="assets/images/library-backend.jpg" alt="Library Backend Project">
+                    <img src="image/perpustakaan.png" alt="Library Backend Project">
                     <div class="project-overlay">
                         <a href="https://github.com/darklco/perpustakaan" class="overlay-btn">
                             See

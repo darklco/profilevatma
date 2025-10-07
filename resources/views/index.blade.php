@@ -22,13 +22,12 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: #ffffff;
-            /* padding: 40px 20px; */
             min-height: 100vh;
         }
 
         /* Hero Section */
         .hero-section {
-            min-height: 100vh;
+            min-height: 30vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -67,8 +66,6 @@
             color: #561c24;
             line-height: 1.1;
             margin-bottom: 20px;
-            /* font-family: 'MyCustomFont'; */
-            /* src: url('fonts/kalufira.otf') format('truetype'); */
             font-family: serif;
         }
 
@@ -131,7 +128,6 @@
 
         .social-links a {
             color: #561c24;
-            font-size: 0.5rem;
             transition: all 0.4s ease;
         }
 
@@ -140,22 +136,15 @@
             transform: translateY(-3px);
         }
 
-        .image-.container {
-            max-width: 1200px;
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            /* sebelumnya 60px */
+        .image-container {
+            display: flex;
+            justify-content: center;
             align-items: center;
-            padding: 20px 40px;
-            /* lebih rapat */
         }
 
         .profile-circle {
             width: 100%;
             max-width: 420px;
-            /* sebelumnya 350px */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -175,26 +164,11 @@
             border-radius: 0;
         }
 
-
-
         @keyframes slideInLeft {
             from {
                 opacity: 0;
                 transform: translateX(-50px);
             }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -202,45 +176,39 @@
         }
 
         @keyframes wave {
-
-            0%,
-            100% {
+            0%, 100% {
                 transform: rotate(0deg);
             }
-
-            10%,
-            30% {
+            10%, 30% {
                 transform: rotate(14deg);
             }
-
-            20%,
-            40% {
+            20%, 40% {
                 transform: rotate(-8deg);
             }
-
             50% {
                 transform: rotate(10deg);
             }
-
             60% {
                 transform: rotate(0deg);
             }
         }
 
         @keyframes float {
-
-            0%,
-            100% {
+            0%, 100% {
                 transform: translateY(0px);
             }
-
             50% {
                 transform: translateY(-20px);
             }
         }
 
-        /* Mobile Responsive - Centered Layout */
+        /* Tablet Responsive */
         @media (max-width: 968px) {
+            .hero-section {
+                padding: 100px 40px 40px 40px;
+                min-height: auto;
+            }
+
             .container {
                 grid-template-columns: 1fr;
                 gap: 40px;
@@ -248,17 +216,15 @@
                 padding: 20px;
             }
 
-            /* Gambar di paling atas */
             .image-container {
                 order: -1;
-                margin-bottom: 0px;
+                margin-bottom: 0;
             }
 
             .profile-circle {
-                max-width: 280px;
+                max-width: 300px;
             }
 
-            /* Content rata tengah */
             .content {
                 display: flex;
                 flex-direction: column;
@@ -267,6 +233,7 @@
 
             h1 {
                 font-size: 3rem;
+                text-align: center;
             }
 
             .greeting {
@@ -287,10 +254,11 @@
             }
         }
 
+        /* Mobile Responsive */
         @media (max-width: 480px) {
             .hero-section {
-                padding: 20px 15px 0px 0px;
-                min-height: 90vh;
+                padding: 100px 20px 40px 20px;
+                min-height: auto;
             }
 
             .container {
@@ -298,17 +266,49 @@
                 padding: 15px;
             }
 
+            .image-container {
+                order: -1;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .profile-circle {
+                max-width: 240px;
+                margin: 0 auto;
+            }
+
+            .content {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
             h1 {
                 font-size: 2.5rem;
+                text-align: center;
+                width: 100%;
             }
 
             .greeting {
                 font-size: 1rem;
+                text-align: center;
+                width: 100%;
             }
 
             .title {
                 font-size: 1.1rem;
                 margin-bottom: 30px;
+                text-align: center;
+                width: 100%;
+            }
+
+            .buttons {
+                gap: 15px;
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
             }
 
             .btn {
@@ -316,22 +316,50 @@
                 font-size: 0.9rem;
             }
 
-            .buttons {
-                gap: 15px;
+            .social-links {
+                width: 100%;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .social-links a svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        /* Extra Small Mobile */
+        @media (max-width: 360px) {
+            .hero-section {
+                padding: 90px 15px 30px 15px;
             }
 
             .profile-circle {
-                max-width: 240px;
+                max-width: 200px;
             }
 
-            .social-links a {
-                font-size: 1.3rem;
+            h1 {
+                font-size: 2rem;
+            }
+
+            .greeting {
+                font-size: 0.9rem;
+            }
+
+            .title {
+                font-size: 1rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.85rem;
             }
         }
     </style>
 </head>
 
 <body>
+    <!-- Navbar include here -->
     @include('layouts.navbar')
     <!-- Hero Section -->
     <section class="hero-section" id="home">
@@ -379,10 +407,11 @@
             </div>
         </div>
     </section>
+
+    <!-- Other sections would go here -->
     @include('sections.about')
     @include('sections.project')
     @include('sections.contact')
     @include('layouts.footer')
 </body>
-
 </html>

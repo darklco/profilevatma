@@ -46,6 +46,8 @@
             font-family: serif;
             transition: all 0.4s ease;
             z-index: 1002;
+            display: flex;
+            align-items: center;
         }
 
         .logo:hover {
@@ -120,28 +122,37 @@
             display: none;
             flex-direction: column;
             cursor: pointer;
-            gap: 5px;
+            gap: 4px;
             z-index: 1001;
+            flex-shrink: 0;
+            padding: 8px;
+            background: transparent;
+            border: none;
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
         }
 
         .hamburger span {
-            width: 25px;
-            height: 3px;
+            width: 20px;
+            height: 2px;
             background: #561c24;
-            border-radius: 3px;
-            transition: all 0.4s ease;
+            border-radius: 2px;
+            transition: all 0.3s ease;
         }
 
         .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(8px, 8px);
+            transform: rotate(45deg) translate(5px, 5px);
         }
 
         .hamburger.active span:nth-child(2) {
             opacity: 0;
+            transform: translateX(-10px);
         }
 
         .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -7px);
+            transform: rotate(-45deg) translate(5px, -5px);
         }
 
         @keyframes slideDown {
@@ -217,6 +228,15 @@
 
             .logo {
                 font-size: 1.2rem;
+            }
+
+            .logo svg {
+                width: 32px;
+                height: 32px;
+            }
+
+            .hamburger {
+                flex-shrink: 0;
             }
 
             .hamburger span {
@@ -302,7 +322,7 @@
             </div>
         </div>
     </nav>
-    
+
     <script>
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('navMenu');

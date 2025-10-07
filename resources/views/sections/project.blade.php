@@ -258,7 +258,7 @@
 
         @media (max-width: 480px) {
             body {
-                padding: 20px 10px;
+                padding: 0px 0px;
             }
 
             .portfolio-section {

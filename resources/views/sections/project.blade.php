@@ -428,7 +428,7 @@
                     <span class="project-category">Frontend</span>
                     <h3 class="project-title">Portofolio Frontend</h3>
                     <p class="project-description">
-                        Modern and responsive Frontend of JPSRe with data visualizations, charts, and interactive components.
+                        Modern and responsive portofolio with data visualizations, charts, and interactive components.
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">CSS</span>

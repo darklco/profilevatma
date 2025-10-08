@@ -405,6 +405,7 @@
                     <div class="project-tech">
                         <span class="tech-tag">CSS</span>
                         <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">JavaScript</span>
                         <span class="tech-tag">Bootstrap</span>
                     </div>
                 </div>

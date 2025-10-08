@@ -326,7 +326,8 @@
     <script>
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('navMenu');
-        const navLinks = document.querySelectorAll('.nav-link');
+        // Ambil semua link di nav-menu yang punya href dengan #
+        const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
 
         // Toggle hamburger menu
         hamburger.addEventListener('click', function() {
@@ -335,18 +336,41 @@
             document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
         });
 
-        // Handle nav link clicks
+        // Smooth scroll untuk semua link termasuk Contact Me
         navLinks.forEach(link => {
             link.addEventListener('click', function(e) {
-                // Remove active class from all links
-                navLinks.forEach(l => l.classList.remove('active'));
-                // Add active class to clicked link
-                this.classList.add('active');
+                e.preventDefault();
                 
-                // Close mobile menu
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-                document.body.style.overflow = 'auto';
+                const targetId = this.getAttribute('href');
+                
+                // Check if it's a valid anchor link
+                if (!targetId || !targetId.startsWith('#')) return;
+                
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    // Remove active class from all nav-link elements
+                    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                    
+                    // Add active class to clicked link if it has nav-link class
+                    if (this.classList.contains('nav-link')) {
+                        this.classList.add('active');
+                    }
+                    
+                    // Close mobile menu
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                    
+                    // Smooth scroll to target section
+                    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                    const targetPosition = targetSection.offsetTop - navbarHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
 
@@ -370,6 +394,29 @@
             } else {
                 navbar.style.borderBottom = '2px solid #561c24';
             }
+        });
+
+        // Update active link on scroll
+        window.addEventListener('scroll', function() {
+            let current = '';
+            const sections = document.querySelectorAll('section[id]');
+            const navbarHeight = document.querySelector('.navbar').offsetHeight;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - navbarHeight - 100;
+                const sectionHeight = section.offsetHeight;
+                
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
         });
     </script>
 </body>

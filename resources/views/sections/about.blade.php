@@ -412,7 +412,7 @@
                     </div>
                     <h4>Frontend Skills</h4>
                     <ul class="skill-list">
-                        <li>HTML5 & CSS</li>
+                        <li>HTML & CSS</li>
                         <li>Responsive Design</li>
                     </ul>
                 </div>
@@ -442,14 +442,14 @@
                         <span class="timeline-date">2023 - Present</span>
                         <h4>Software Engineering Students</h4>
                         <p class="timeline-company">SMK 17 Agustus 1945</p>
-                        <p>Developing and maintaining scalable backend systems, implementing RESTful APIs, and optimizing database performance for high-traffic applications.</p>
+                        <p>Learning web development with focus on Laravel and backend technologies. Building school projects, creating REST APIs, and practicing database management skills.</p>
                     </div>
                 </div>
             </div>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <span class="timeline-date">2025 - Present</span>
+                        <span class="timeline-date">April - Present</span>
                         <h4>Intern as Backend Developer</h4>
                         <p class="timeline-company">PT Redbuzz Mediatama</p>
                         <p>Developing and maintaining scalable backend systems, implementing RESTful APIs, and optimizing database performance for high-traffic applications.</p>

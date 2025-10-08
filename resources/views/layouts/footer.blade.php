@@ -185,3 +185,32 @@
         </div>
     </div>
 </footer>
+
+<script>
+// Smooth scroll untuk footer links
+document.addEventListener('DOMContentLoaded', function() {
+    const footerLinks = document.querySelectorAll('.footer-link[href^="#"]');
+    
+    footerLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                // Get navbar height if exists
+                const navbar = document.querySelector('.navbar');
+                const navbarHeight = navbar ? navbar.offsetHeight : 0;
+                const targetPosition = targetSection.offsetTop - navbarHeight;
+                
+                // Smooth scroll to target section
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
+</script>

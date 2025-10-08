@@ -346,7 +346,7 @@
                     <span class="project-category">Backend</span>
                     <h3 class="project-title">Library Backend</h3>
                     <p class="project-description">
-                        Scalable e-commerce backend with payment gateway integration, inventory management, and order processing system.
+                        The Library Backend is designed to manage library books through a structured CRUD system for pages and sections within the CMS.
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">Laravel</span>
@@ -373,7 +373,7 @@
                     <span class="project-category">Backend</span>
                     <h3 class="project-title">JPS-Re Backend</h3>
                     <p class="project-description">
-                        Distributed microservices system with message queues, service discovery, and centralized logging for high availability.
+                        JPSRe backend is designed to manage dynamic content data through a structured CRUD system for pages and sections within the CMS.
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">Laravel</span>
@@ -400,7 +400,7 @@
                     <span class="project-category">Frontend</span>
                     <h3 class="project-title">JPS-Re Frontend</h3>
                     <p class="project-description">
-                        Modern and responsive dashboard UI with data visualization, charts, and interactive components.
+                        Frontend of JPSRe features a modern and responsive design with interactive components, dynamic layouts, and data visualizations for an engaging user experience.
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">CSS</span>
@@ -428,7 +428,7 @@
                     <span class="project-category">Frontend</span>
                     <h3 class="project-title">Portofolio Frontend</h3>
                     <p class="project-description">
-                        Modern and responsive dashboard UI with data visualization, charts, and interactive components.
+                        Modern and responsive Frontend of JPSRe with data visualizations, charts, and interactive components.
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">CSS</span>

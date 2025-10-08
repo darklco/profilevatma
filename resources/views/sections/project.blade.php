@@ -100,15 +100,15 @@
         }
 
         .project-card.show {
-            animation: fadeInUp 0.8s ease-out forwards;
+            animation: fadeInUp 0.5s ease-out forwards;
         }
 
-        .project-card:nth-child(1).show { animation-delay: 0.1s; }
-        .project-card:nth-child(2).show { animation-delay: 0.2s; }
-        .project-card:nth-child(3).show { animation-delay: 0.3s; }
-        .project-card:nth-child(4).show { animation-delay: 0.4s; }
-        .project-card:nth-child(5).show { animation-delay: 0.5s; }
-        .project-card:nth-child(6).show { animation-delay: 0.6s; }
+        .project-card:nth-child(1).show { animation-delay: 0.05s; }
+        .project-card:nth-child(2).show { animation-delay: 0.1s; }
+        .project-card:nth-child(3).show { animation-delay: 0.15s; }
+        .project-card:nth-child(4).show { animation-delay: 0.2s; }
+        .project-card:nth-child(5).show { animation-delay: 0.25s; }
+        .project-card:nth-child(6).show { animation-delay: 0.3s; }
 
         .project-card:hover {
             border-color: #561c24;
@@ -460,10 +460,10 @@
                     if (filterValue === 'all' || category === filterValue) {
                         card.style.display = 'block';
                         
-                        // Add show class with delay for animation
+                        // Add show class with shorter delay for faster animation
                         setTimeout(() => {
                             card.classList.add('show');
-                        }, index * 100);
+                        }, index * 50);
                     } else {
                         card.style.display = 'none';
                     }

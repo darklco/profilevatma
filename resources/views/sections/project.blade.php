@@ -15,7 +15,6 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: #ffffff;
             min-height: 100vh;
-            /* padding: 40px 20px; */
         }
 
         .portfolio-section {
@@ -96,14 +95,20 @@
             border-radius: 12px;
             overflow: hidden;
             transition: all 0.4s ease;
-            animation: fadeInUp 0.8s ease-out;
-            animation-fill-mode: both;
+            opacity: 0;
+            transform: translateY(30px);
         }
 
-        .project-card:nth-child(1) { animation-delay: 0.1s; }
-        .project-card:nth-child(2) { animation-delay: 0.2s; }
-        .project-card:nth-child(3) { animation-delay: 0.3s; }
-        .project-card:nth-child(4) { animation-delay: 0.4s; }
+        .project-card.show {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .project-card:nth-child(1).show { animation-delay: 0.1s; }
+        .project-card:nth-child(2).show { animation-delay: 0.2s; }
+        .project-card:nth-child(3).show { animation-delay: 0.3s; }
+        .project-card:nth-child(4).show { animation-delay: 0.4s; }
+        .project-card:nth-child(5).show { animation-delay: 0.5s; }
+        .project-card:nth-child(6).show { animation-delay: 0.6s; }
 
         .project-card:hover {
             border-color: #561c24;
@@ -297,11 +302,11 @@
 
         <div class="projects-grid" id="projectsGrid">
             <!-- Backend Project 1 -->
-            <div class="project-card" data-category="backend">
+            <div class="project-card show" data-category="backend">
                 <div class="project-image">
                     <img src="image/yava-be.png" alt="Yava Backend Project">
                     <div class="project-overlay">
-                        <a href="https://yava-webcore.k8s.redtech.co.id/login" class="overlay-btn">
+                        <a href="https://yava-webcore.k8s.redtech.co.id/login" class="overlay-btn" target="_blank">
                             See
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
@@ -325,11 +330,11 @@
             </div>
 
             <!-- Backend Project 2 -->
-            <div class="project-card" data-category="backend">
+            <div class="project-card show" data-category="backend">
                 <div class="project-image">
                     <img src="image/perpustakaan.png" alt="Library Backend Project">
                     <div class="project-overlay">
-                        <a href="https://github.com/darklco/perpustakaan" class="overlay-btn">
+                        <a href="https://github.com/darklco/perpustakaan" class="overlay-btn" target="_blank">
                             See
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
@@ -352,11 +357,11 @@
             </div>
 
             <!-- Backend Project 3 -->
-            <div class="project-card" data-category="backend">
+            <div class="project-card show" data-category="backend">
                 <div class="project-image">
                     <img src="image/jpsre-be.png" alt="JPS-Re Backend Project">
                     <div class="project-overlay">
-                        <a href="https://jpsre.k8s.redtech.co.id/login" class="overlay-btn">
+                        <a href="https://jpsre.k8s.redtech.co.id/login" class="overlay-btn" target="_blank">
                             See
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
@@ -383,7 +388,7 @@
                 <div class="project-image">
                     <img src="image/jpsre.png" alt="JPS-Re Frontend Project">
                     <div class="project-overlay">
-                        <a href="https://jpsre.k8s.redtech.co.id/?lang=en" class="overlay-btn">
+                        <a href="https://jpsre.k8s.redtech.co.id/?lang=en" class="overlay-btn" target="_blank">
                             See
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
@@ -446,12 +451,19 @@
 
                 const filterValue = btn.getAttribute('data-filter');
 
-                projectCards.forEach(card => {
+                projectCards.forEach((card, index) => {
                     const category = card.getAttribute('data-category');
+                    
+                    // Remove show class first
+                    card.classList.remove('show');
                     
                     if (filterValue === 'all' || category === filterValue) {
                         card.style.display = 'block';
-                        card.style.animation = 'fadeInUp 0.6s ease-out';
+                        
+                        // Add show class with delay for animation
+                        setTimeout(() => {
+                            card.classList.add('show');
+                        }, index * 100);
                     } else {
                         card.style.display = 'none';
                     }

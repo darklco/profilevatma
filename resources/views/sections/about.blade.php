@@ -65,7 +65,7 @@
             animation: fadeInUp 1s ease-out;
             max-width: 900px;
             margin: 0 auto;
-            text-align: left;
+            text-align: justify ;
         }
 
         .about-text p {

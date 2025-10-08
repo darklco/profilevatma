@@ -48,10 +48,20 @@
             z-index: 1002;
             display: flex;
             align-items: center;
+            cursor: pointer;
         }
 
         .logo:hover {
             color: #8b4a52;
+            transform: scale(1.05);
+        }
+
+        .logo svg {
+            transition: transform 0.4s ease;
+        }
+
+        .logo:hover svg {
+            transform: rotate(360deg);
         }
 
         .nav-menu {
@@ -296,7 +306,7 @@
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">
+            <a href="#home" class="logo" id="logoLink">
                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
                     <circle cx="20" cy="20" r="18" fill="#561c24" stroke="#8b4a52" stroke-width="2"/>
                     <text x="20" y="27" font-family="serif" font-size="20" font-weight="bold" fill="#e8dcc4" text-anchor="middle">V</text>
@@ -326,8 +336,9 @@
     <script>
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('navMenu');
+        const logoLink = document.getElementById('logoLink');
         // Ambil semua link di nav-menu yang punya href dengan #
-        const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
+        const navLinks = document.querySelectorAll('.nav-menu a[href^="#"], .logo[href^="#"]');
 
         // Toggle hamburger menu
         hamburger.addEventListener('click', function() {
@@ -336,7 +347,7 @@
             document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
         });
 
-        // Smooth scroll untuk semua link termasuk Contact Me
+        // Smooth scroll untuk semua link termasuk logo dan Contact Me
         navLinks.forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -355,6 +366,14 @@
                     // Add active class to clicked link if it has nav-link class
                     if (this.classList.contains('nav-link')) {
                         this.classList.add('active');
+                    }
+                    
+                    // If logo is clicked, set Home as active
+                    if (this.classList.contains('logo')) {
+                        const homeLink = document.querySelector('.nav-link[href="#home"]');
+                        if (homeLink) {
+                            homeLink.classList.add('active');
+                        }
                     }
                     
                     // Close mobile menu

@@ -162,7 +162,7 @@
         <div class="footer-links">
             <a href="#home" class="footer-link">Home</a>
             <a href="#about" class="footer-link">About</a>
-            <a href="#portfolio" class="footer-link">Projects</a>
+            <a href="#portfolio" class="footer-link">Portofolio</a>
             <a href="#contact" class="footer-link">Contact</a>
         </div>
 

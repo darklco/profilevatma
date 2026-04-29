@@ -1,7 +1,7 @@
 <style>
 /* Footer Styles */
 .footer {
-    background: #561c24;
+    background: #66023c;
     color: #e8dcc4;
     padding: 30px 20px;
     margin-top: 80px;

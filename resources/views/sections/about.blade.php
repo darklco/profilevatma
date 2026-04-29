@@ -50,7 +50,7 @@
         .section-title {
             font-size: 3rem;
             font-weight: 900;
-            color: #561c24;
+            color: #66023c;
             font-family: arial;
             margin-bottom: 20px;
         }
@@ -76,7 +76,7 @@
         }
 
         .highlight {
-            color: #561c24;
+            color: #66023c;
             font-weight: 600;
         }
 
@@ -92,7 +92,7 @@
         .skills-header h3 {
             font-size: 2.5rem;
             font-weight: 900;
-            color: #561c24;
+            color: #66023c;
             font-family: serif;
             margin-bottom: 15px;
         }
@@ -117,7 +117,7 @@
         .skill-card:nth-child(3) { animation-delay: 0.3s; }
 
         .skill-card:hover {
-            border-color: #561c24;
+            border-color: #66023c;
             transform: translateY(-5px);
             background: rgba(255, 255, 255, 0.9);
         }
@@ -125,7 +125,7 @@
         .skill-icon {
             width: 60px;
             height: 60px;
-            background: #561c24;
+            background: #66023c;
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -136,7 +136,7 @@
         .skill-card h4 {
             font-size: 1.5rem;
             font-weight: 700;
-            color: #561c24;
+            color: #66023c;
             margin-bottom: 15px;
         }
 
@@ -155,7 +155,7 @@
 
         .skill-list li::before {
             content: '▹';
-            color: #561c24;
+            color: #66023c;
             font-weight: bold;
             font-size: 1.2rem;
         }
@@ -172,7 +172,7 @@
         .experience-header h3 {
             font-size: 2.5rem;
             font-weight: 900;
-            color: #561c24;
+            color: #66023c;
             font-family: serif;
         }
 
@@ -199,14 +199,14 @@
         }
 
         .timeline-content:hover {
-            border-color: #561c24;
+            border-color: #66023c;
             background: rgba(255, 255, 255, 0.9);
         }
 
         .timeline-date {
             display: inline-block;
             padding: 6px 14px;
-            background: #561c24;
+            background: #66023c;
             color: #e8dcc4;
             border-radius: 20px;
             font-size: 0.85rem;
@@ -217,7 +217,7 @@
         .timeline-content h4 {
             font-size: 1.4rem;
             font-weight: 700;
-            color: #561c24;
+            color: #66023c;
             margin-bottom: 5px;
         }
 
@@ -449,7 +449,7 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <span class="timeline-date">April - Present</span>
+                        <span class="timeline-date">April - October</span>
                         <h4>Intern as Backend Developer</h4>
                         <p class="timeline-company">PT Redbuzz Mediatama</p>
                         <p>Developing and maintaining scalable backend systems, implementing RESTful APIs, and optimizing database performance for high-traffic applications.</p>

@@ -41,7 +41,7 @@
         .section-title {
             font-size: 3rem;
             font-weight: 900;
-            color: #561c24;
+            color: #66023c;
             font-family: serif;
             margin-bottom: 20px;
         }
@@ -66,7 +66,7 @@
             padding: 12px 28px;
             font-size: 0.95rem;
             font-weight: 600;
-            color: #561c24;
+            color: #66023c;
             background: rgba(255, 255, 255, 0.5);
             border: 2px solid #d4c5a9;
             border-radius: 8px;
@@ -76,9 +76,9 @@
 
         .filter-btn:hover,
         .filter-btn.active {
-            background: #561c24;
+            background: #66023c;
             color: #e8dcc4;
-            border-color: #561c24;
+            border-color: #66023c;
             transform: translateY(-2px);
         }
 
@@ -111,7 +111,7 @@
         .project-card:nth-child(6).show { animation-delay: 0.3s; }
 
         .project-card:hover {
-            border-color: #561c24;
+            border-color: #66023c;
             transform: translateY(-10px);
             background: rgba(255, 255, 255, 0.9);
         }
@@ -119,7 +119,7 @@
         .project-image {
             width: 100%;
             height: 220px;
-            background: linear-gradient(135deg, #8b4a52 0%, #561c24 100%);
+            background: linear-gradient(135deg, #8b4a52 0%, #66023c 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -160,7 +160,7 @@
         .overlay-btn {
             padding: 12px 30px;
             background: #e8dcc4;
-            color: #561c24;
+            color: #66023c;
             border: none;
             border-radius: 8px;
             display: flex;
@@ -189,7 +189,7 @@
             font-size: 0.8rem;
             font-weight: 600;
             color: #e8dcc4;
-            background: #561c24;
+            background: #66023c;
             border-radius: 20px;
             margin-bottom: 15px;
         }
@@ -197,7 +197,7 @@
         .project-title {
             font-size: 1.5rem;
             font-weight: 700;
-            color: #561c24;
+            color: #66023c;
             margin-bottom: 10px;
             font-family: serif;
         }
@@ -218,7 +218,7 @@
         .tech-tag {
             padding: 5px 12px;
             font-size: 0.8rem;
-            color: #561c24;
+            color: #66023c;
             background: rgba(86, 28, 36, 0.1);
             border: 1px solid #d4c5a9;
             border-radius: 5px;
@@ -412,7 +412,7 @@
             </div>
 
             <!-- Frontend Project 2 -->
-            <div class="project-card" data-category="frontend" style="display: none;">
+            {{-- <div class="project-card" data-category="frontend" style="display: none;">
                 <div class="project-image">
                     <img src="image/portofolio.png" alt="Portfolio Frontend Project">
                     <div class="project-overlay">
@@ -437,7 +437,7 @@
                         <span class="tech-tag">Bootstrap</span>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </section>
     

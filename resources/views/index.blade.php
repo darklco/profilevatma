@@ -63,7 +63,7 @@
         h1 {
             font-size: 4rem;
             font-weight: 900;
-            color: #561c24;
+            color: #66023c;
             line-height: 1.1;
             margin-bottom: 20px;
             font-family: serif;
@@ -71,7 +71,7 @@
 
         .title {
             font-size: 1.3rem;
-            color: #561c24;
+            color: #66023c;
             font-family: Arial, Helvetica, sans-serif;
             margin-bottom: 40px;
             font-weight: 500;
@@ -98,25 +98,25 @@
         }
 
         .btn-primary {
-            background: #561c24;
-            color: #e8dcc4;
+            background: #66023c;
+            color: #d4c5a9;
         }
 
         .btn-primary:hover {
-            background: #6d2430;
+            background: #66023c;
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(86, 28, 36, 0.4);
         }
 
         .btn-secondary {
             background: #f5f0e1;
-            color: #561c24;
+            color: #66023c;
             border: 2px solid #d4c5a9;
         }
 
         .btn-secondary:hover {
-            border-color: #561c24;
-            background: #fff;
+            border-color: #66023c;
+            background: #d4c5a9;
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(86, 28, 36, 0.2);
         }
@@ -132,7 +132,7 @@
         }
 
         .social-links a:hover {
-            color: #8b4a52;
+            color: #66023c;
             transform: translateY(-3px);
         }
 
@@ -371,7 +371,7 @@
             </div>
 
             <div class="content">
-                <p class="section-subtitle">Hello <span class="wave">👋</span></p>
+                <p class="section-subtitle">Hello <span class="wave"></span></p>
                 <h1>Vatma Aulia<br>Adha</h1>
                 <p class="title">Junior Backend Developer</p>
 
@@ -383,7 +383,7 @@
                                 stroke-linejoin="round" />
                         </svg>
                     </a>
-                    <a href="https://www.canva.com/design/DAGhPJpnP64/eidGwd03td0RyYZ-FcWf7A/edit?utm_content=DAGhPJpnP64&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="btn btn-secondary">
+                    <a href="https://canva.link/2vge6meubzivee1" class="btn btn-secondary">
                         My CV
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                             <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"

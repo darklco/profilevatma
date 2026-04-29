@@ -24,7 +24,7 @@
             right: 0;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            border-bottom: 2px solid #561c24;
+            border-bottom: 2px solid #66023c;
             z-index: 1000;
             animation: slideDown 1s ease-out;
         }
@@ -41,7 +41,7 @@
         .logo {
             font-size: 1.5rem;
             font-weight: 900;
-            color: #561c24;
+            color: #66023c;
             text-decoration: none;
             font-family: serif;
             transition: all 0.4s ease;
@@ -72,7 +72,7 @@
         }
 
         .nav-link {
-            color: #561c24;
+            color: #66023c;
             text-decoration: none;
             font-weight: 500;
             font-size: 1rem;
@@ -109,8 +109,8 @@
 
         .nav-btn {
             padding: 12px 28px;
-            background: #561c24;
-            color: #e8dcc4;
+            background: #66023c;
+            color: #d4c5a9;
             border: none;
             border-radius: 8px;
             font-weight: 600;
@@ -123,7 +123,7 @@
         }
 
         .nav-btn:hover {
-            background: #6d2430;
+            background: #66023c;
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(86, 28, 36, 0.4);
         }
@@ -147,7 +147,7 @@
         .hamburger span {
             width: 20px;
             height: 2px;
-            background: #561c24;
+            background: #66023c;
             border-radius: 2px;
             transition: all 0.3s ease;
         }
@@ -202,7 +202,7 @@
                 height: 100vh;
                 text-align: center;
                 transition: right 0.4s ease;
-                border-left: 2px solid #561c24;
+                border-left: 2px solid #66023c;
                 padding: 100px 40px 40px;
                 gap: 35px;
                 justify-content: flex-start;
@@ -308,7 +308,7 @@
         <div class="nav-container">
             <a href="#home" class="logo" id="logoLink">
                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                    <circle cx="20" cy="20" r="18" fill="#561c24" stroke="#8b4a52" stroke-width="2"/>
+                    <circle cx="20" cy="20" r="18" fill="#66023c" stroke="#8b4a52" stroke-width="2"/>
                     <text x="20" y="27" font-family="serif" font-size="20" font-weight="bold" fill="#e8dcc4" text-anchor="middle">V</text>
                 </svg>
             </a>
@@ -409,9 +409,9 @@
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 50) {
-                navbar.style.borderBottom = '3px solid #561c24';
+                navbar.style.borderBottom = '3px solid #66023c';
             } else {
-                navbar.style.borderBottom = '2px solid #561c24';
+                navbar.style.borderBottom = '2px solid #66023c';
             }
         });
 

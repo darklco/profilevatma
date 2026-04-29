@@ -29,7 +29,7 @@
         .section-title {
             font-size: 3rem;
             font-weight: 900;
-            color: #561c24;
+            color: #66023c;
             font-family: serif;
             margin-bottom: 20px;
         }
@@ -58,7 +58,7 @@
         .info-title {
             font-size: 2rem;
             font-weight: 700;
-            color: #561c24;
+            color: #66023c;
             margin-bottom: 20px;
             font-family: serif;
         }
@@ -88,7 +88,7 @@
         }
 
         .contact-item:hover {
-            border-color: #561c24;
+            border-color: #66023c;
             background: rgba(255, 255, 255, 0.8);
             transform: translateX(5px);
         }
@@ -101,7 +101,7 @@
         .contact-icon {
             width: 50px;
             height: 50px;
-            background: #561c24;
+            background: #66023c;
             color: #e8dcc4;
             border-radius: 10px;
             display: flex;
@@ -113,7 +113,7 @@
         .contact-details h3 {
             font-size: 1.1rem;
             font-weight: 600;
-            color: #561c24;
+            color: #66023c;
             margin-bottom: 5px;
         }
 
@@ -129,7 +129,7 @@
         }
 
         .contact-details a:hover {
-            color: #561c24;
+            color: #66023c;
         }
 
         .social-connect {
@@ -140,7 +140,7 @@
         .social-connect h3 {
             font-size: 1.3rem;
             font-weight: 600;
-            color: #561c24;
+            color: #66023c;
             margin-bottom: 20px;
         }
 
@@ -153,7 +153,7 @@
         .social-icon {
             width: 50px;
             height: 50px;
-            background: #561c24;
+            background: #66023c;
             color: #e8dcc4;
             border-radius: 10px;
             display: flex;
